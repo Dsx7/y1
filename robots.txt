@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ytthumbnaildownloader.eu.org/sitemap.xml

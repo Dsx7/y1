@@ -1,0 +1,365 @@
+/* --- VARIABLES & RESET --- */
+
+:root {
+    --bg-dark: #0f172a;
+    --card-bg: #1e293b;
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    /* Removes blue tap box on mobile */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-dark);
+    /* Animated Gradient Background */
+    background-image: radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* --- LAYOUT --- */
+
+.app-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* --- HEADER --- */
+
+header {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: white;
+}
+
+.logo b {
+    color: var(--primary);
+}
+
+
+/* --- MAIN CARD --- */
+
+.card {
+    background: rgba(30, 41, 59, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    width: 100%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #fff, #cbd5e1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+
+/* --- INPUT --- */
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 18px 20px;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+/* --- BUTTONS --- */
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+    font-family: inherit;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-main);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+
+/* Download button */
+
+.btn-primary {
+    grid-column: span 3;
+    background: var(--primary);
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 16px;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.4);
+}
+
+
+/* --- PREVIEW IMAGE --- */
+
+.preview-area {
+    margin-top: 30px;
+    position: relative;
+}
+
+#img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    cursor: zoom-in;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#img:hover {
+    transform: scale(1.02);
+}
+
+.hint {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    opacity: 0.8;
+}
+
+
+/* --- SEO SECTION --- */
+
+.content-wrapper {
+    margin-top: 50px;
+    max-width: 700px;
+    text-align: left;
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.seo-text h2 {
+    color: white;
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+
+.seo-text h3 {
+    color: white;
+    margin-top: 25px;
+    font-size: 1.2rem;
+}
+
+.feature-list,
+ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.feature-list li {
+    margin-bottom: 8px;
+}
+
+
+/* --- FOOTER --- */
+
+footer {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    width: 100%;
+}
+
+.social-link {
+    color: var(--primary);
+    text-decoration: none;
+    display: block;
+    margin-top: 8px;
+}
+
+
+/* --- FULLSCREEN MODAL --- */
+
+#fullpage {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.92);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+}
+
+
+/* --- CLOSE BUTTON --- */
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    /* Minimum touch target size */
+    height: 44px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: white;
+    font-size: 32px;
+    line-height: 44px;
+    /* Center text vertically */
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10000;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
+/* --- MOBILE RESPONSIVENESS --- */
+
+@media (max-width: 600px) {
+    .app-container {
+        padding: 10px;
+    }
+    .card {
+        padding: 25px 20px;
+    }
+    .card-title {
+        font-size: 1.5rem;
+    }
+    /* Stack buttons on mobile */
+    .controls {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .btn-primary {
+        grid-column: span 1;
+        margin-top: 5px;
+    }
+    /* Move close button slightly for safe area */
+    .close-btn {
+        top: 30px;
+        right: 25px;
+        background: rgba(255, 255, 255, 0.3);
+        /* Higher contrast on mobile */
+    }
+}
+
+
+/* --- ESSENTIALS PAGE STYLES --- */
+
+.legal-card {
+    text-align: left;
+    /* Align text to left for reading */
+    max-width: 900px;
+}
+
+.legal-content section {
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+}
+
+.legal-content section:last-child {
+    border-bottom: none;
+}
+
+.legal-content h3 {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.legal-content p,
+.legal-content li {
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.legal-content a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.legal-content ul {
+    padding-left: 20px;
+}

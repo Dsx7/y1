@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YouTube Thumbnail Downloader 2026 | Save 4K & HD Images</title>
+    <meta name="description" content="Download YouTube thumbnails in 4K, 1080p, and HD instantly. The fastest, free online YT thumbnail grabber tool. No ads, no registration.">
+    <meta name="keywords" content="YouTube Thumbnail Downloader, 4K Thumbnail, Save YT Image, YouTube Cover Downloader, Free Tool 2026">
+    <link rel="canonical" href="https://ytthumbnaildownloader.eu.org/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+
+    <meta property="og:title" content="YouTube Thumbnail Downloader | 4K & HD">
+    <meta property="og:description" content="Get high-quality YouTube thumbnails in one click. Free, fast, and secure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ytthumbnaildownloader.eu.org/">
+
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "YouTube Thumbnail Downloader",
+            "url": "https://ytthumbnaildownloader.eu.org/",
+            "applicationCategory": "Multimedia",
+            "operatingSystem": "Any",
+            "offers": {
+                "@type": "Offer",
+                "price": "0"
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <header class="header">
+            <div class="logo">
+                <span class="icon">🖼️</span> YT<b>Grabber</b>
+            </div>
+        </header>
+
+        <main class="card">
+            <h1 class="card-title">YouTube Thumbnail Downloader</h1>
+            <p class="card-subtitle">Paste a video link below to save the HD image.</p>
+
+            <div class="input-group">
+                <input type="text" id="url" placeholder="https://youtube.com/watch?v=..." autocomplete="off">
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-outline" onclick="dynamicUrl(0)">Default</button>
+                <button class="btn btn-outline" onclick="dynamicUrl(1)">High Res (HD)</button>
+                <button class="btn btn-outline" onclick="dynamicUrl(2)">Max (4K)</button>
+                <button class="btn btn-primary" onclick="download()">Download Image ↓</button>
+            </div>
+
+            <div class="preview-area">
+                <img id="img" src="https://img.youtube.com/vi/k8mOAV0KJLE/maxresdefault.jpg" alt="Thumbnail Preview" onclick="fullPage()" title="Click to Zoom">
+                <div class="hint">👆 Tap image to zoom in</div>
+            </div>
+        </main>
+
+        <section class="content-wrapper">
+            <article class="seo-text">
+                <h2>Why use this Thumbnail Downloader?</h2>
+                <p>Downloading YouTube thumbnails shouldn't be hard. Our tool extracts the highest resolution cover image (up to 4K) directly from YouTube servers. It is perfect for creators needing to archive their work, or designers looking for inspiration.</p>
+
+                <h3>Supported Qualities</h3>
+                <ul class="feature-list">
+                    <li><strong>Standard:</strong> Small size, fast loading (Default).</li>
+                    <li><strong>High Definition (HD):</strong> 1080p quality, great for most uses.</li>
+                    <li><strong>4K Ultra:</strong> Maximum resolution available (if uploaded in 4K).</li>
+                </ul>
+
+                <h3>How to use</h3>
+                <ol>
+                    <li>Copy the URL of the YouTube video.</li>
+                    <li>Paste it into the box above.</li>
+                    <li>Select your desired quality button.</li>
+                    <li>Click <strong>Download</strong> to save to your device.</li>
+                </ol>
+            </article>
+        </section>
+
+        <footer>
+            <div class="footer-links" style="margin-bottom: 10px;">
+                <a href="about.html" style="color: #94a3b8; text-decoration: none; margin: 0 10px; font-size: 0.9rem;">About</a> |
+                <a href="contact.html" style="color: #94a3b8; text-decoration: none; margin: 0 10px; font-size: 0.9rem;">Contact</a> |
+                <a href="essentials.html" style="color: #94a3b8; text-decoration: none; margin: 0 10px; font-size: 0.9rem;">Privacy & Terms</a>
+            </div>
+            <p>© 2026 YTGrabber. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <div id="fullpage" onclick="this.style.display='none'">
+        <div class="close-btn">&times;</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
